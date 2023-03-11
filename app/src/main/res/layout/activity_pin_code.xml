@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".PinCodeActivity">
+
+    <TextView
+        android:id="@+id/verify_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/sans_medium"
+        android:paddingStart="30dp"
+        android:text="@string/verify"
+        android:textColor="@color/text_color"
+        android:textSize="70sp"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+
+        android:id="@+id/passcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verify_txt"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/sans_medium"
+        android:paddingStart="35dp"
+        android:text="@string/enter_pin_here"
+        android:textColor="@color/text_color"
+        android:textSize="40sp"
+        tools:ignore="RtlSymmetry" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pin_view"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@id/passcode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:elevation="10dp"
+        android:inputType="number"
+        android:itemBackground="@drawable/pin_bg"
+        android:textColor="@color/med_black"
+        app:itemHeight="60dp"
+        app:itemRadius="15dp"
+        app:itemSpacing="20dp"
+        app:itemWidth="60dp"
+        app:lineColor="@color/black"
+        app:viewType="rectangle">
+    </com.chaos.view.PinView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pin_view"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/have_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sans_regular"
+            android:text="@string/don_t_have_a_code"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/create_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/have_code"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/sans_regular"
+            android:text="@string/create_one"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+<androidx.appcompat.widget.AppCompatButton
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/button_bg"
+android:text="@string/verify_and_create_account"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    />
+</RelativeLayout>

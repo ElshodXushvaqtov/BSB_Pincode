@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="by_creating_an_account_or_signing_you_agree_to_our_terms_and_conditions">By creating an account or signing you agree to our <u>Terms and Conditions.</u></string>
+    <string name="verify">Verify</string>
+    <string name="enter_pin_here">Enter PIN here...</string>
+    <string name="don_t_have_a_code">Don\'t have a code?</string>
+    <string name="create_one">Create one.</string>
+    <string name="verify_and_create_account">Verify and create account</string>
+
+</resources>
