@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/back"
+        >
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/background" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/all"
+            android:layout_width="409dp"
+            android:layout_height="727dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/usern"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="57dp"
+                android:layout_marginBottom="28dp"
+                android:hint="Username*"
+                android:gravity="center"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+                app:layout_constraintEnd_toEndOf="@id/all"
+                app:layout_constraintHorizontal_bias="0.525"
+                app:layout_constraintStart_toStartOf="@id/all"
+                app:startIconDrawable="@drawable/baseline_person_24"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="57dp"
+                android:layout_marginBottom="52dp"
+                android:hint="Password"
+                android:gravity="center"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/next"
+                app:layout_constraintEnd_toEndOf="@id/all"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@id/all"
+                app:startIconDrawable="@drawable/baseline_lock_24"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/password"
+                    app:layout_constraintBottom_toBottomOf="@id/all"
+                    app:layout_constraintEnd_toEndOf="@id/all"
+                    app:layout_constraintStart_toStartOf="@id/all"
+                    app:layout_constraintTop_toTopOf="@id/all" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="343dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="132dp"
+                android:backgroundTint="#D747FF"
+                android:text="Log in"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/all"
+                app:layout_constraintEnd_toEndOf="@id/all"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="@id/all"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:text="Login to your account"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@+id/usern"
+                app:layout_constraintEnd_toEndOf="@id/all"
+                app:layout_constraintStart_toStartOf="@id/all"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="311dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/by_creating_an_account_or_signing_you_agree_to_our_terms_and_conditions"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/all"
+                app:layout_constraintEnd_toEndOf="@id/all"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toStartOf="@id/all"
+                app:layout_constraintTop_toBottomOf="@+id/next"
+                app:layout_constraintVertical_bias="0.206"
+                tools:ignore="TextSizeCheck" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="@+id/imageView6">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="71dp"
+                    android:layout_height="66dp"
+                    app:srcCompat="@drawable/app_logo" />
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintStart_toStartOf="@id/all"
+                app:layout_constraintTop_toTopOf="@id/all"
+                app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="@id/all"
+                app:layout_constraintHorizontal_bias="0.468"
+                app:layout_constraintStart_toStartOf="@id/all"
+                app:layout_constraintTop_toTopOf="@id/all"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ellipse" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

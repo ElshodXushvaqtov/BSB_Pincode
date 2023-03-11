@@ -14,13 +14,18 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Library"
+            android:exported="false" />
+        <activity
+            android:name=".LogInActivity"
+            android:exported="false" />
+        <activity
             android:name=".PinCodeActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
