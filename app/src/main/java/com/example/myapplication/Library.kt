@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ import com.example.myapplication.model.Girls
 
 class Library : AppCompatActivity() {
     lateinit var binding: ActivityLibraryBinding
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLibraryBinding.inflate(layoutInflater)
@@ -22,39 +24,39 @@ class Library : AppCompatActivity() {
         boysBooks.add(
             Boys(
                 "Mafia",
-                "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1186125868i/1632138.jpg",
+                "https://www.clipartmax.com/png/middle/1-19280_little-boy-reading-a-book-clip-art-read-book-clipart.png",
                 Color.parseColor("#C7D1B2")
             )
         )
         boysBooks.add(
             Boys(
                 "Man",
-                "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1186125868i/1632138.jpg",
+                "https://www.clipartmax.com/png/middle/1-19280_little-boy-reading-a-book-clip-art-read-book-clipart.png",
                 Color.parseColor("#CCC6D0")
             )
         )
         boysBooks.add(
             Boys(
                 "The Dark",
-                "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1186125868i/1632138.jpg",
+                "https://www.clipartmax.com/png/middle/1-19280_little-boy-reading-a-book-clip-art-read-book-clipart.png",
                 Color.parseColor("#B7C8DE")
             )
         )
         boysBooks.add(
             Boys(
                 "Black",
-                "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1186125868i/1632138.jpg",
+                "https://www.clipartmax.com/png/middle/1-19280_little-boy-reading-a-book-clip-art-read-book-clipart.png",
                 Color.parseColor("#DCFAE5")
             )
         )
         boysBooks.add(
             Boys(
                 "The Scream",
-                "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1186125868i/1632138.jpg",
+                "https://www.clipartmax.com/png/middle/1-19280_little-boy-reading-a-book-clip-art-read-book-clipart.png",
                 Color.parseColor("#E1CAB3")
             )
         )
-        val adapter = BookBoysAdapter(boysBooks)
+        val adapter = BookBoysAdapter(this,boysBooks)
         binding.boysRv.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
         binding.boysRv.adapter = adapter
 
@@ -62,42 +64,42 @@ class Library : AppCompatActivity() {
         girlsBooks.add(
             Girls(
                 "Princess",
-                "https://igromaster.by/upload/iblock/6d1/6d1355e4cfa7c12744c10108a7309084.jpg",
+                "https://www.clipartmax.com/png/middle/20-208179_cartoon-image-of-book-read-book-clipart.png",
                 Color.parseColor("#E1B0E3")
             )
         )
         girlsBooks.add(
             Girls(
                 "Dark Paradise",
-                "https://igromaster.by/upload/iblock/6d1/6d1355e4cfa7c12744c10108a7309084.jpg",
+                "https://www.clipartmax.com/png/middle/20-208179_cartoon-image-of-book-read-book-clipart.png",
                 Color.parseColor("#BB93E3")
             )
         )
         girlsBooks.add(
             Girls(
                 "Cinderella",
-                "https://igromaster.by/upload/iblock/6d1/6d1355e4cfa7c12744c10108a7309084.jpg",
+                "https://www.clipartmax.com/png/middle/20-208179_cartoon-image-of-book-read-book-clipart.png",
                 Color.parseColor("#87CDE4")
             )
         )
         girlsBooks.add(
             Girls(
                 "Mother",
-                "https://igromaster.by/upload/iblock/6d1/6d1355e4cfa7c12744c10108a7309084.jpg",
+                "https://www.clipartmax.com/png/middle/20-208179_cartoon-image-of-book-read-book-clipart.png",
                 Color.parseColor("#788DE0")
             )
         )
         girlsBooks.add(
             Girls(
                 "Beautiful",
-                "https://igromaster.by/upload/iblock/6d1/6d1355e4cfa7c12744c10108a7309084.jpg",
+                "https://www.clipartmax.com/png/middle/20-208179_cartoon-image-of-book-read-book-clipart.png",
                 Color.parseColor("#B290D6")
             )
         )
-        val adapter2 = BookGirlsAdapter(girlsBooks)
+        val adapter2 = BookGirlsAdapter(this,girlsBooks)
         binding.girlsRv.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
         binding.girlsRv.adapter = adapter2
-        val username=intent.getStringExtra("name")
+        val username=intent.getStringExtra("username")
         binding.userName.text="Welcome back, $username!\nHow are you?"
     }
 }

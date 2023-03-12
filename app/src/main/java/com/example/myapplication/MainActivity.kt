@@ -25,6 +25,16 @@ class MainActivity : AppCompatActivity() {
         val edit = shared.edit()
         val gson = Gson()
         val convert = object : TypeToken<List<User>>() {}.type
+
+        binding.login.setOnClickListener {
+            val intent = Intent(this, LogInActivity::class.java)
+            intent.putExtra(
+                "users",
+                userList
+            )
+            startActivity(intent)
+            finish()
+        }
         binding.next.setOnClickListener {
             if (binding.username.text.toString().isNotEmpty() && binding.passcode.text.toString()
                     .isNotEmpty()
@@ -46,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                     val str = gson.toJson(userList)
                     edit.putString("users", str).apply()
                     Toast.makeText(this, "Successfully saved", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, LogInActivity::class.java)
+                    val intent = Intent(this, PinCodeActivity::class.java)
                     intent.putExtra(
                         "users",
                         userList
@@ -54,15 +64,8 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 } else {
-                    Toast.makeText(this, "This user is alredy registered", Toast.LENGTH_SHORT)
+                    Toast.makeText(this, "Please Login", Toast.LENGTH_SHORT)
                         .show()
-                    val intent = Intent(this, LogInActivity::class.java)
-                    intent.putExtra(
-                        "users",
-                        userList
-                    )
-                    startActivity(intent)
-                    finish()
                 }
             }
         }
