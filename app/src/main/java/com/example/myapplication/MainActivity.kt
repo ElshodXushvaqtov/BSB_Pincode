@@ -46,7 +46,11 @@ class MainActivity : AppCompatActivity() {
                     val str = gson.toJson(userList)
                     edit.putString("users", str).apply()
                     Toast.makeText(this, "Successfully saved", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, PinCodeActivity::class.java)
+                    val intent = Intent(this, LogInActivity::class.java)
+                    intent.putExtra(
+                        "users",
+                        userList
+                    )
                     startActivity(intent)
                     finish()
                 } else {

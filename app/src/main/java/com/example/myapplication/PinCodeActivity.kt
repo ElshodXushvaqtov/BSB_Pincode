@@ -11,7 +11,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 class PinCodeActivity : AppCompatActivity() {
-    private var userList = mutableListOf<User>()
+    private var pinList = mutableListOf<User>()
     private lateinit var username: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +27,7 @@ class PinCodeActivity : AppCompatActivity() {
         binding.verifyCreateBtn.setOnClickListener {
             Toast.makeText(applicationContext,"PIN code saved succesfully!",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, Library::class.java)
+            intent.putExtra("name", username)
             startActivity(intent)
             finish()
         }
