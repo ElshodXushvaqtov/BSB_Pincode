@@ -2,14 +2,13 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.model.User
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import javax.security.auth.login.LoginException
 
 private var userList = ArrayList<User>()
 private var userNames = ArrayList<String>()
