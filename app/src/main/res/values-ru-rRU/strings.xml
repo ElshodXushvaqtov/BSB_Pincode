@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Мое заявление</string>
-    <string name="by_creating_an_account_or_signing_you_agree_to_our_terms_and_conditions">Создавая учетную запись или подписывая, вы соглашаетесь с нашими <u>Terms and Conditions.</u></string>
+    <string name="by_creating_an_account_or_signing_you_agree_to_our_terms_and_conditions">Создавая учетную запись или подписывая, вы соглашаетесь с нашими <u>Условия эксплуатации.</u></string>
     <string name="verify">Проверять</string>
     <string name="enter_pin_here">Введите PIN-код здесь...</string>
     <string name="don_t_have_a_code">У вас нет кода?</string>

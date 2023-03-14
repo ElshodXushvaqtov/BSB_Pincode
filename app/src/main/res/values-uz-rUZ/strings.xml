@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Mening Ilovam</string>
+    <string name="by_creating_an_account_or_signing_you_agree_to_our_terms_and_conditions">Hisob yaratish yoki royxatdan otish orqali siz bizning shartlarimizga rozilik bildirasiz
+ <u>Foydalanish shartlari.</u></string>
+    <string name="verify">Tekshirish</string>
+    <string name="enter_pin_here">PIN-kodni shu yerga kiriting...</string>
+    <string name="don_t_have_a_code">Kod yoqmi?</string>
+    <string name="create_one">Yarat</string>
+    <string name="verify_and_create_account">Tasdiqlash va yaratish</string>
+</resources>
